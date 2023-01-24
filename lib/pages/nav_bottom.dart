@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ticket_book/pages/home_page.dart';
 
 class NavbarBottom extends StatefulWidget {
   const NavbarBottom({super.key});
@@ -8,13 +9,12 @@ class NavbarBottom extends StatefulWidget {
 }
 
 class _NavbarBottomState extends State<NavbarBottom> {
-  int _selectedIndex = 1;
+  int _selectedIndex = 0;
   static final List _widgetOptions = [
-    Text('home'),
+    HomePage(),
     Text('Search'),
     Text('Tickets'),
     Text('Profile'),
-    Text('extra'),
   ];
 
   void _changeIndex(int index){
@@ -27,10 +27,10 @@ class _NavbarBottomState extends State<NavbarBottom> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-      title: Text('Book Tickets'),
-      centerTitle:true,
-    ),
+    //     appBar: AppBar(
+    //   title: Text('Book Tickets'),
+    //   centerTitle:true,
+    // ),
     body: Center(child: _widgetOptions[_selectedIndex]),
     bottomNavigationBar: BottomNavigationBar(
       type: BottomNavigationBarType.fixed,                  // otherwise icons will move slightly when clicked
