@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ticket_book/pages/home_page.dart';
-
+import 'package:ticket_book/pages/search_tab.dart';
+import 'package:ticket_book/pages/ticket_tab.dart';
 class NavbarBottom extends StatefulWidget {
   const NavbarBottom({super.key});
 
@@ -12,8 +13,8 @@ class _NavbarBottomState extends State<NavbarBottom> {
   int _selectedIndex = 0;
   static final List _widgetOptions = [
     HomePage(),
-    Text('Search'),
-    Text('Tickets'),
+    SearchTab(),
+    TicketTab(),
     Text('Profile'),
   ];
 

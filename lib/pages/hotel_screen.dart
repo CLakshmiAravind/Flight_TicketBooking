@@ -11,7 +11,7 @@ class HotelScreen extends StatelessWidget {
     print(hotel);
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
-      height: 300,
+      height: 250,
       width: MediaQuery.of(context).size.width*0.6,
       decoration: BoxDecoration(
         color: Colors.brown.shade300,
@@ -21,7 +21,6 @@ class HotelScreen extends StatelessWidget {
             color: Colors.black,
             blurRadius: 2,
             spreadRadius: 1
-
           )
         ]
       ),

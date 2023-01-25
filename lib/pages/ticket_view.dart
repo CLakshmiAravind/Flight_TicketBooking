@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ticket_book/utils/app_layout.dart';
 import 'package:ticket_book/utils/styles.dart';
+import 'package:ticket_book/utils/app_layout.dart';
 import 'package:gap/gap.dart';
 
 class TicketView extends StatelessWidget {
@@ -9,7 +11,7 @@ class TicketView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: MediaQuery.of(context).size.width-50,
-      height: 200,
+      height: AppLayout.getHeight(200),
       child: Container(
         child: Column(
           children: [

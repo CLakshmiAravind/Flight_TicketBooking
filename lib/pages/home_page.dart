@@ -4,6 +4,7 @@ import 'package:ticket_book/pages/ticket_view.dart';
 import 'package:gap/gap.dart';
 import 'package:ticket_book/pages/hotel_screen.dart';
 import 'package:ticket_book/utils/app_info_list.dart';
+import 'package:ticket_book/widgets/upcoming_flights.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -75,26 +76,11 @@ class HomePage extends StatelessWidget {
                 ),
                 Gap(29),
                 Container(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Upcoming Flights',
-                        style: Styles.headLineStyle2,
-                      ),
-                      InkWell(
-                        child: Text(
-                          'view all',
-                          style: TextStyle(color: Colors.blue, fontSize: 15.5),
-                        ),
-                        onTap: () {
-                          print('you are tapped');
-                        },
-                      )
-                    ],
-                  ),
-                ),
+                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    child: UpcomingFlights(
+                      text1: 'Upcoming Flights',
+                      text2: 'view all',
+                    )),
                 Gap(25),
                 SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
@@ -107,29 +93,22 @@ class HomePage extends StatelessWidget {
                       ],
                     )),
                 Container(
-                  padding: EdgeInsets.symmetric(horizontal: 20,),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Hotels',
-                        style: Styles.headLineStyle1,
-                      ),
-                      InkWell(
-                        child: Text(
-                          'view all',
-                          style: TextStyle(color: Colors.blue),
-                        ),
-                        onTap: () {},
-                      )
-                    ],
-                  ),
-                ),
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 20,
+                    ),
+                    child: UpcomingFlights(
+                      text1: 'Hotels',
+                      text2: 'view all',
+                    )),
                 SingleChildScrollView(
-                  scrollDirection:Axis.horizontal,
-                  child: Row(
-                  children: hotelList.map((singleHotel)=> HotelScreen(hotel: singleHotel)).toList()
-                ))
+                    scrollDirection: Axis.horizontal,
+                    padding: EdgeInsets.all(20),
+                    child: Row(
+                        children: hotelList
+                            .map((singleHotel) =>
+                                HotelScreen(hotel: singleHotel))
+                            .toList())
+                            ),
               ],
             ),
           )
