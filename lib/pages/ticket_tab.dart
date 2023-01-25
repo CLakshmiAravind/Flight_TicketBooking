@@ -3,6 +3,8 @@ import 'package:ticket_book/pages/ticket_view.dart';
 import 'package:ticket_book/utils/app_layout.dart';
 import 'package:ticket_book/widgets/flight_hotels.dart';
 import 'package:gap/gap.dart';
+// import 'package:barcode/barcode.dart';
+import 'package:barcode_widget/barcode_widget.dart';
 
 class TicketTab extends StatelessWidget {
   const TicketTab({super.key});
@@ -151,9 +153,18 @@ class TicketTab extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [Text('Payment method'), Text('Price')],
                 ),
+                Gap(20),
+                BarcodeWidget(
+              data: 'https://www.github.com/CLakshmiAravind',
+              barcode: Barcode.code128(),
+              drawText: false,
+              color: Colors.black,
+              height: 50,
+              ),
               ],
             ),
           ),
+          
           Gap(20),
           TicketView(),
         ],
