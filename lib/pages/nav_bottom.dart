@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ticket_book/pages/home_page.dart';
+import 'package:ticket_book/pages/profile_page.dart';
 import 'package:ticket_book/pages/search_tab.dart';
 import 'package:ticket_book/pages/ticket_tab.dart';
 class NavbarBottom extends StatefulWidget {
@@ -15,7 +16,7 @@ class _NavbarBottomState extends State<NavbarBottom> {
     HomePage(),
     SearchTab(),
     TicketTab(),
-    Text('Profile'),
+    ProfilePage(),
   ];
 
   void _changeIndex(int index){

@@ -21,7 +21,7 @@ class TicketTab extends StatelessWidget {
             style: TextStyle(fontSize: 38, color: Colors.black),
           ),
           Gap(AppLayout.getHeight(25)),
-          FlightsHotels(text1: 'text1', text2: 'text2'),
+          FlightsHotels(text1: 'Flights', text2: 'Hotels'),
           Gap(AppLayout.getHeight(25)),
           Container(
             // height: AppLayout.getScreenHeight()*0.8,
