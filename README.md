@@ -7,7 +7,7 @@ A new Flutter project.
 This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
-![alt text](https://github.com/CLakshmiAravind/Flight_TicketBooking/blob/master/img.png?raw=true)
+![alt text](https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg)
 
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
